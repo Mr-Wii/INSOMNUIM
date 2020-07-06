@@ -5,3 +5,9 @@ html {
 body {
   background-color: black;
 }
+
+.fadeout {
+  opacity: 0;
+  display: hidden;
+  transition: opacity 3s ease-in-out;
+}
