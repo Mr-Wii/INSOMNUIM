@@ -35,7 +35,7 @@ const App = () => {
         showReload={false}
         showDownload={false}
         showPlayMode={false}
-        defaultVolume={0}
+        defaultVolume={0.6}
         showPlay={true}
         toggleMode={true}
         showMiniProcessBar={true}
