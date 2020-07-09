@@ -1,6 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Fira + Sans:400, 300, 700);
 body,
 html {
   margin: 0;
+  overflow: hidden;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
 }
 body {
   background-color: black;
@@ -8,6 +13,88 @@ body {
 
 .fadeout {
   opacity: 0;
-  display: hidden;
   transition: opacity 3s ease-in-out;
+}
+
+@keyframes shine {
+  from {
+    -webkit-mask-position: 150%;
+  }
+
+  to {
+    -webkit-mask-position: -50%;
+  }
+}
+
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -80px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 250px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  font-family: 'Piedra', cursive;
+  border-radius: 0 5px 5px 0; /* Rounded corners on the top right and bottom right side */
+  transition: 0.5s ease;
+  mask-image: linear-gradient(
+    -75deg,
+    rgba(0, 0, 0, 0.6) 30%,
+    #000 50%,
+    rgba(0, 0, 0, 0.6) 70%
+  );
+  mask-size: 200%;
+  animation: shine 2s ease-in-out infinite;
+}
+
+#mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The about link: 20px from the top with a green background */
+#about {
+  top: 120px;
+  background-color: #4caf4f00;
+}
+
+#about img {
+  text-align: right;
+  width: 30%;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+
+#blog {
+  top: 280px;
+  background-color: #4caf4f00;
+}
+
+#blog .gashomeu {
+  text-align: right;
+  width: 30%;
+  vertical-align: middle;
+  margin-left: 40px;
+}
+
+#projects {
+  top: 418px;
+  background-color: #4caf4f00;
+}
+#projects img {
+  text-align: right;
+  width: 35%;
+  vertical-align: middle;
+  margin-left: 13px;
+}
+
+#contact {
+  top: 575px;
+  background-color: #4caf4f00;
+}
+#contact img {
+  text-align: right;
+  width: 40%;
+  vertical-align: middle;
+  margin-left: 20px;
 }
